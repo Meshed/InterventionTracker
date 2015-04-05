@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <TextView
+        p1:text="Child Details"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="603.7dp"
+        p1:layout_height="50dp"
+        p1:id="@+id/textView1"
+        p1:gravity="center"
+        p1:textSize="40dp" />
+    <ImageView
+        p1:src="@android:drawable/ic_menu_gallery"
+        p1:layout_width="250dp"
+        p1:layout_height="250dp"
+        p1:layout_below="@id/textView1"
+        p1:id="@+id/childPhoto" />
+    <TextView
+        p1:text="Name: "
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView1"
+        p1:layout_toRightOf="@id/childPhoto"
+        p1:id="@+id/textView2"
+        p1:layout_marginTop="20dp" />
+    <TextView
+        p1:text="DOB: "
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_toRightOf="@id/childPhoto"
+        p1:id="@+id/textView3"
+        p1:layout_below="@id/textView2"
+        p1:paddingRight="13dp" />
+    <TextView
+        p1:text="Unit: "
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView3"
+        p1:id="@+id/textView4"
+        p1:layout_toRightOf="@id/childPhoto"
+        p1:layout_marginRight="15dp" />
+    <TextView
+        p1:text="Kenneth Brown"
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_toRightOf="@id/textView2"
+        p1:id="@+id/childNameText"
+        p1:layout_below="@+id/textView1"
+        p1:layout_marginTop="20dp" />
+    <TextView
+        p1:text="6/29/2008"
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@id/textView2"
+        p1:id="@+id/childDOBText"
+        p1:layout_toRightOf="@id/textView3" />
+    <TextView
+        p1:text="1st Grade"
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_toRightOf="@id/textView4"
+        p1:id="@+id/childGradeText"
+        p1:layout_below="@id/childDOBText" />
+    <TextView
+        p1:text="Session History"
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="596.8dp"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@+id/childPhoto"
+        p1:id="@+id/textView5"
+        p1:layout_marginTop="13dp"
+        p1:gravity="center_horizontal" />
+    <ListView
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="571.0dp"
+        p1:layout_below="@+id/newSession"
+        p1:id="@+id/sessionHistory" />
+    <Button
+        p1:text="New Session"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/newSession"
+        p1:layout_below="@id/childPhoto"
+        p1:layout_marginLeft="10dp"
+        p1:layout_marginBottom="5dp" />
+</RelativeLayout>

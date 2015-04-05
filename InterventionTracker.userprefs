@@ -1,0 +1,30 @@
+﻿<Properties StartupItem="InterventionTracker_Android/InterventionTracker_Android.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 7 (Jelly Bean)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="InterventionTracker_Android/NewChildActivity.cs">
+    <Files>
+      <File FileName="InterventionTracker_Android/ChildRepository.cs" Line="39" Column="45" />
+      <File FileName="../XamarinUniversity/People/People/People/PersonRepository.cs" Line="1" Column="1" />
+      <File FileName="InterventionTracker_Android/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="InterventionTracker_Android/NewChildActivity.cs" Line="48" Column="46" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="InterventionTracker_Android" expanded="True">
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True">
+                <Node name="NewChild.axml" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <AuthorInfo Name="" Email="" Copyright="Meshed Solutions, LLC" Company="Meshed Solutions, LLC" Trademark="" />
+  <MonoDevelop.Ide.ItemProperties.InterventionTracker__Android AndroidDesignerPreferredDevice="Nexus 7" />
+</Properties>
