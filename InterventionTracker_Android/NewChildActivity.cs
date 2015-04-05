@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Views.InputMethods;
 
 namespace InterventionTracker_Android
 {
@@ -35,6 +36,10 @@ namespace InterventionTracker_Android
 			var dob = FindViewById<EditText> (Resource.Id.dobText);
 			var unit = FindViewById<EditText> (Resource.Id.unitText);
 			var status = FindViewById<TextView> (Resource.Id.childAddStatus);
+
+			// Hide software keyboard when the button is pressed
+			var inputMethodManager = (InputMethodManager)GetSystemService(Context.InputMethodService);
+			inputMethodManager.HideSoftInputFromWindow(unit.WindowToken, 0);
 
 			Child child = new Child ();
 
