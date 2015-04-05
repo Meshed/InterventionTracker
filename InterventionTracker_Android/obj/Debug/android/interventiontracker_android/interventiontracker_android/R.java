@@ -19,9 +19,9 @@ public final class R {
         public static final int addChild=0x7f050014;
         public static final int childAddStatus=0x7f050015;
         public static final int childDOBText=0x7f050007;
-        public static final int childGradeText=0x7f050008;
         public static final int childNameText=0x7f050006;
         public static final int childPhoto=0x7f050002;
+        public static final int childUnitText=0x7f050008;
         public static final int dobText=0x7f050012;
         public static final int imageView1=0x7f05000c;
         public static final int name=0x7f05000d;

@@ -53,6 +53,7 @@ namespace InterventionTracker_Android
 				status.Text = "Child Added Successfully";
 			}
 			catch(Exception exception) {
+				status.Text = "There was a problem adding the child";
 			}
 		}
 	}

@@ -22,8 +22,6 @@ namespace InterventionTracker_Android
 			SetContentView (Resource.Layout.Main);
 
 			// Get the data for the layout
-			var data = new ChildList ();
-			data.Initialize ();
 			var children = await new ChildRepository ().GetAllAsync ();
 
 
@@ -48,6 +46,7 @@ namespace InterventionTracker_Android
 		void OnChildListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 		{
 			var intent = new Intent (this, typeof(ChildDetailActivity));
+			intent.PutExtra ("childID", e.Id);
 			StartActivity (intent);
 		}
 

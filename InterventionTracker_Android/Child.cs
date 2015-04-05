@@ -12,26 +12,5 @@ namespace InterventionTracker_Android
 		public string DateOfBirth { get; set; }
 		public string Unit { get; set; }
 	}
-
-	public class ChildList
-	{
-		public List<Child> Children { get; set; }
-
-		public ChildList()
-		{
-			Children = new List<Child>();
-		}
-
-		public void Initialize()
-		{
-			for (int i = 0; i < 30; i++) {
-				var child = new Child ();
-
-				child.FullName = "Kenneth Brown";
-
-				Children.Add (child);
-			}
-		}
-	}
 }
 

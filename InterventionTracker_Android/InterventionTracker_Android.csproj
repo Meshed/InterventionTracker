@@ -63,6 +63,7 @@
     <Compile Include="Session.cs" />
     <Compile Include="SessionHistoryAdapter.cs" />
     <Compile Include="ChildRepository.cs" />
+    <Compile Include="SessionRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

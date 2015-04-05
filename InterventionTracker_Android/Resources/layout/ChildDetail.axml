@@ -45,7 +45,6 @@
         p1:layout_toRightOf="@id/childPhoto"
         p1:layout_marginRight="15dp" />
     <TextView
-        p1:text="Kenneth Brown"
         p1:textAppearance="?android:attr/textAppearanceMedium"
         p1:layout_width="wrap_content"
         p1:layout_height="wrap_content"
@@ -54,7 +53,6 @@
         p1:layout_below="@+id/textView1"
         p1:layout_marginTop="20dp" />
     <TextView
-        p1:text="6/29/2008"
         p1:textAppearance="?android:attr/textAppearanceMedium"
         p1:layout_width="wrap_content"
         p1:layout_height="wrap_content"
@@ -62,12 +60,11 @@
         p1:id="@+id/childDOBText"
         p1:layout_toRightOf="@id/textView3" />
     <TextView
-        p1:text="1st Grade"
         p1:textAppearance="?android:attr/textAppearanceMedium"
         p1:layout_width="wrap_content"
         p1:layout_height="wrap_content"
         p1:layout_toRightOf="@id/textView4"
-        p1:id="@+id/childGradeText"
+        p1:id="@+id/childUnitText"
         p1:layout_below="@id/childDOBText" />
     <TextView
         p1:text="Session History"

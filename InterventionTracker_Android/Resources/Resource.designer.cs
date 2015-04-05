@@ -77,14 +77,14 @@ namespace InterventionTracker_Android
 			// aapt resource value: 0x7f050007
 			public const int childDOBText = 2131034119;
 			
-			// aapt resource value: 0x7f050008
-			public const int childGradeText = 2131034120;
-			
 			// aapt resource value: 0x7f050006
 			public const int childNameText = 2131034118;
 			
 			// aapt resource value: 0x7f050002
 			public const int childPhoto = 2131034114;
+			
+			// aapt resource value: 0x7f050008
+			public const int childUnitText = 2131034120;
 			
 			// aapt resource value: 0x7f050012
 			public const int dobText = 2131034130;
