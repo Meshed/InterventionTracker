@@ -46,6 +46,13 @@ namespace InterventionTracker_Android
 			intent.PutExtra ("childID", _childID);
 			StartActivity (intent);
 		}
+
+		protected override void OnStop ()
+		{
+			base.OnStop ();
+
+			Finish ();
+		}
 	}
 }
 

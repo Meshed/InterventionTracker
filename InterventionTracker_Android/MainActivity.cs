@@ -14,6 +14,9 @@ namespace InterventionTracker_Android
 	[Activity (Label = "Intervention Tracker", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
+		ListView childListView;
+		List<Child> children;
+		
 		protected override async void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -22,19 +25,19 @@ namespace InterventionTracker_Android
 			SetContentView (Resource.Layout.Main);
 
 			// Get the data for the layout
-			var children = await new ChildRepository ().GetAllAsync ();
+			children = await new ChildRepository ().GetAllAsync ();
 
 
 			// Control References
 			var addChildButton = FindViewById<Button>(Resource.Id.AddChild);
-			var childList = FindViewById<ListView>(Resource.Id.ChildList);
+			childListView = FindViewById<ListView>(Resource.Id.ChildList);
 
 			// Events
 			addChildButton.Click += OnAddChildClick;
-			childList.ItemClick += OnChildListItemClick;
+			childListView.ItemClick += OnChildListItemClick;
 
 			// Data Binding
-			childList.Adapter = new ChildAdapter(this, children);
+			childListView.Adapter = new ChildAdapter(this, children);
 		}
 
 		void OnAddChildClick(object sender, EventArgs e)
@@ -52,11 +55,19 @@ namespace InterventionTracker_Android
 
 		async Task<List<Child>> GetChildList()
 		{
-			List<Child> childList = new List<Child> ();
+			List<Child> childList;
 
 			childList = await new ChildRepository ().GetAllAsync ();
 
 			return childList;
+		}
+
+		protected async override void OnResume ()
+		{
+			base.OnResume ();
+
+			children = await new ChildRepository ().GetAllAsync ();
+			childListView.Adapter = new ChildAdapter (this, children);
 		}
 	}
 }
