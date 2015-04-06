@@ -16,6 +16,8 @@ namespace InterventionTracker_Android
 	[Activity (Label = "Child Details", Icon="@drawable/icon")]			
 	public class ChildDetailActivity : Activity
 	{
+		private int _childID = 0;
+		
 		protected async override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -25,14 +27,14 @@ namespace InterventionTracker_Android
 			// Get data
 			ChildRepository childRepository = new ChildRepository();
 			SessionRepository sessionRepository = new SessionRepository ();
-			int childID = int.Parse (Intent.GetLongExtra ("childID", 0).ToString ());
+			_childID = int.Parse (Intent.GetLongExtra ("childID", 0).ToString ());
 			Child child = null;
-			List<Session> sessions;
+			List<Session> sessions = null;
 
-			if (childID > 0) 
+			if (_childID > 0) 
 			{
-				child = await childRepository.GetByIDAsync (childID);
-				sessions = await sessionRepository.GetAllForChild (childID);
+				child = await childRepository.GetByIDAsync (_childID);
+				sessions = await sessionRepository.GetAllForChild (_childID);
 			}
 
 			// Get activity views
@@ -40,6 +42,9 @@ namespace InterventionTracker_Android
 			var childDOB = FindViewById<TextView> (Resource.Id.childDOBText);
 			var childUnit = FindViewById<TextView> (Resource.Id.childUnitText);
 			var sessionList = FindViewById<ListView> (Resource.Id.sessionHistory);
+			var newSessionButton = FindViewById<Button> (Resource.Id.newSession);
+
+			newSessionButton.Click += NewSessionClicked;
 
 			// Populate controls
 			if (child != null) 
@@ -51,6 +56,13 @@ namespace InterventionTracker_Android
 
 			// Fill session list
 			sessionList.Adapter = new SessionHistoryAdapter (this, sessions);
+		}
+
+		private void NewSessionClicked(object sender, EventArgs e)
+		{
+			var intent = new Intent (this, typeof(NewSessionActivity));
+			intent.PutExtra ("childID", _childID);
+			StartActivity (intent);
 		}
 	}
 }

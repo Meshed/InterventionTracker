@@ -77,6 +77,9 @@ namespace InterventionTracker_Android
 			// aapt resource value: 0x7f050007
 			public const int childDOBText = 2131034119;
 			
+			// aapt resource value: 0x7f050017
+			public const int childName = 2131034135;
+			
 			// aapt resource value: 0x7f050006
 			public const int childNameText = 2131034118;
 			
@@ -92,6 +95,9 @@ namespace InterventionTracker_Android
 			// aapt resource value: 0x7f05000c
 			public const int imageView1 = 2131034124;
 			
+			// aapt resource value: 0x7f05001a
+			public const int interventionMethodLabel = 2131034138;
+			
 			// aapt resource value: 0x7f05000d
 			public const int name = 2131034125;
 			
@@ -104,23 +110,35 @@ namespace InterventionTracker_Android
 			// aapt resource value: 0x7f05000a
 			public const int newSession = 2131034122;
 			
-			// aapt resource value: 0x7f050018
-			public const int numberOfRedirects = 2131034136;
+			// aapt resource value: 0x7f050016
+			public const int newSessionLabel = 2131034134;
+			
+			// aapt resource value: 0x7f05001e
+			public const int numberOfRedirects = 2131034142;
 			
 			// aapt resource value: 0x7f050000
 			public const int relativeLayout1 = 2131034112;
 			
-			// aapt resource value: 0x7f050016
-			public const int sessionDate = 2131034134;
+			// aapt resource value: 0x7f05001d
+			public const int sessionDate = 2131034141;
 			
-			// aapt resource value: 0x7f050017
-			public const int sessionDuration = 2131034135;
+			// aapt resource value: 0x7f050019
+			public const int sessionDuration = 2131034137;
 			
 			// aapt resource value: 0x7f05000b
 			public const int sessionHistory = 2131034123;
 			
-			// aapt resource value: 0x7f050019
-			public const int sessionMethod = 2131034137;
+			// aapt resource value: 0x7f05001f
+			public const int sessionMethod = 2131034143;
+			
+			// aapt resource value: 0x7f05001b
+			public const int sessionMethodEdit = 2131034139;
+			
+			// aapt resource value: 0x7f05001c
+			public const int sessionStart = 2131034140;
+			
+			// aapt resource value: 0x7f050018
+			public const int sessionTimeLabel = 2131034136;
 			
 			// aapt resource value: 0x7f050001
 			public const int textView1 = 2131034113;
@@ -166,7 +184,13 @@ namespace InterventionTracker_Android
 			public const int NewChild = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int SessionHistoryList = 2130903044;
+			public const int NewSession = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int Session = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int SessionHistoryList = 2130903046;
 			
 			static Layout()
 			{

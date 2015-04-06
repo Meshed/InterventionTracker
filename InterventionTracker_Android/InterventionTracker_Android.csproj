@@ -64,6 +64,8 @@
     <Compile Include="SessionHistoryAdapter.cs" />
     <Compile Include="ChildRepository.cs" />
     <Compile Include="SessionRepository.cs" />
+    <Compile Include="NewSessionActivity.cs" />
+    <Compile Include="SessionActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -83,6 +85,8 @@
     <AndroidResource Include="Resources\layout\NewChild.axml" />
     <AndroidResource Include="Resources\layout\ChildDetail.axml" />
     <AndroidResource Include="Resources\layout\SessionHistoryList.axml" />
+    <AndroidResource Include="Resources\layout\NewSession.axml" />
+    <AndroidResource Include="Resources\layout\Session.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>
