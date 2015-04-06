@@ -3,14 +3,6 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <TextView
-        android:text="Intervention Tracker"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:gravity="center"
-        android:textSize="35dp" />
     <Button
         android:text="Add Child"
         android:layout_width="match_parent"

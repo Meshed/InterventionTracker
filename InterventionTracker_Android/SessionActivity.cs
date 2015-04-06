@@ -14,7 +14,7 @@ using Android.Widget;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Session")]			
+	[Activity (Label = "Intervention Tracker - Session", Icon = "@drawable/icon")]			
 	public class SessionActivity : Activity
 	{
 		private string _sessionMethod;

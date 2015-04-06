@@ -6,19 +6,10 @@
     p1:layout_height="match_parent"
     p1:id="@+id/relativeLayout1">
     <TextView
-        p1:text="New Session"
-        p1:textAppearance="?android:attr/textAppearanceLarge"
-        p1:layout_width="606.6dp"
-        p1:layout_height="50dp"
-        p1:textSize="40dp"
-        p1:id="@+id/newSessionLabel"
-        p1:gravity="center_horizontal" />
-    <TextView
         p1:text="Kenneth Brown"
         p1:textAppearance="?android:attr/textAppearanceLarge"
         p1:layout_width="604.2dp"
         p1:layout_height="wrap_content"
-        p1:layout_below="@id/newSessionLabel"
         p1:textSize="30dp"
         p1:id="@+id/childName"
         p1:gravity="center_horizontal"
@@ -53,7 +44,9 @@
         p1:layout_height="162.7dp"
         p1:layout_toRightOf="@id/interventionMethodLabel"
         p1:id="@+id/sessionMethodEdit"
-        p1:layout_below="@id/sessionDuration" />
+        p1:lines="5"
+        p1:layout_below="@id/sessionDuration"
+        p1:gravity="top" />
     <Button
         p1:text="Start"
         p1:layout_width="600.6dp"

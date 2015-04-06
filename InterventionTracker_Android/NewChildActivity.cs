@@ -14,7 +14,7 @@ using Android.Views.InputMethods;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "NewChildActivity")]			
+	[Activity (Label = "Intervention Tracker - New Child", Icon = "@drawable/icon")]			
 	public class NewChildActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

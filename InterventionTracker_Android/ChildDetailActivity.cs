@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Child Details", Icon="@drawable/icon")]			
+	[Activity (Label = "Intervention Tracker - Child Details", Icon="@drawable/icon")]			
 	public class ChildDetailActivity : Activity
 	{
 		private int _childID = 0;
