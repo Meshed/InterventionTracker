@@ -1,15 +1,8 @@
 ﻿<Properties StartupItem="InterventionTracker_Android/InterventionTracker_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 7 (Jelly Bean)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="InterventionTracker_Android/ChildDetailActivity.cs">
-    <Files>
-      <File FileName="InterventionTracker_Android/ChildDetailActivity.cs" Line="28" Column="1" />
-      <File FileName="InterventionTracker_Android/MainActivity.cs" Line="50" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0a543e3f" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/ChildDetailActivity.cs" line="26" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <AuthorInfo Name="" Email="" Copyright="Meshed Solutions, LLC" Company="Meshed Solutions, LLC" Trademark="" />
