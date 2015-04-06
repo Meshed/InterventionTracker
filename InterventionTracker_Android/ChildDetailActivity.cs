@@ -17,6 +17,8 @@ namespace InterventionTracker_Android
 	public class ChildDetailActivity : Activity
 	{
 		private int _childID = 0;
+		List<Session> _sessions = null;
+		ListView _sessionListView = null;
 		
 		protected async override void OnCreate (Bundle bundle)
 		{
@@ -26,22 +28,20 @@ namespace InterventionTracker_Android
 
 			// Get data
 			ChildRepository childRepository = new ChildRepository();
-			SessionRepository sessionRepository = new SessionRepository ();
 			_childID = int.Parse (Intent.GetLongExtra ("childID", 0).ToString ());
 			Child child = null;
-			List<Session> sessions = null;
 
 			if (_childID > 0) 
 			{
 				child = await childRepository.GetByIDAsync (_childID);
-				sessions = await sessionRepository.GetAllForChild (_childID);
+				PopulateSessions ();
 			}
 
 			// Get activity views
 			var childName = FindViewById<TextView> (Resource.Id.childNameText);
 			var childDOB = FindViewById<TextView> (Resource.Id.childDOBText);
 			var childUnit = FindViewById<TextView> (Resource.Id.childUnitText);
-			var sessionList = FindViewById<ListView> (Resource.Id.sessionHistory);
+			_sessionListView = FindViewById<ListView> (Resource.Id.sessionHistory);
 			var newSessionButton = FindViewById<Button> (Resource.Id.newSession);
 
 			newSessionButton.Click += NewSessionClicked;
@@ -55,7 +55,6 @@ namespace InterventionTracker_Android
 			}
 
 			// Fill session list
-			sessionList.Adapter = new SessionHistoryAdapter (this, sessions);
 		}
 
 		private void NewSessionClicked(object sender, EventArgs e)
@@ -63,6 +62,20 @@ namespace InterventionTracker_Android
 			var intent = new Intent (this, typeof(NewSessionActivity));
 			intent.PutExtra ("childID", _childID);
 			StartActivity (intent);
+		}
+
+		private async void PopulateSessions()
+		{
+			SessionRepository sessionRepository = new SessionRepository ();
+			_sessions = await sessionRepository.GetAllForChild (_childID);
+			_sessionListView.Adapter = new SessionHistoryAdapter (this, _sessions);
+		}
+
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+
+			PopulateSessions ();
 		}
 	}
 }

@@ -34,7 +34,7 @@ namespace InterventionTracker_Android
 
 			// Populate the controls with data
 			var session = sessionList[position];
-			sessionDate.Text = session.SessionDate;
+			sessionDate.Text = DateTime.Parse (session.SessionDate).ToShortDateString ();
 			numberOfRedirects.Text = session.NumberOfRedirects.ToString();
 			sessionDuration.Text = session.SessionDuration.ToString();
 			sessionMethod.Text = session.SessionMethod;
