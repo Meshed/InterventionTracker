@@ -88,6 +88,12 @@
     <AndroidResource Include="Resources\layout\SessionHistoryList.axml" />
     <AndroidResource Include="Resources\layout\NewSession.axml" />
     <AndroidResource Include="Resources\layout\Session.axml" />
+    <AndroidResource Include="Resources\layout-large-land\ChildDetail.axml" />
+    <AndroidResource Include="Resources\layout-normal\ChildDetail.axml" />
+    <AndroidResource Include="Resources\layout-normal-land\ChildDetail.axml" />
+    <AndroidResource Include="Resources\layout-normal\Session.axml" />
+    <AndroidResource Include="Resources\layout-large-land\Session.axml" />
+    <AndroidResource Include="Resources\layout-normal-land\Session.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

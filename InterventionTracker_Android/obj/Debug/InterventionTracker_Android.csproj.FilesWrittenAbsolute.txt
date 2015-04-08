@@ -26,3 +26,9 @@
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/bin/Debug/SQLite.Net.Async.dll
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout/newsession.xml
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout/session.xml
+/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout-large-land/childdetail.xml
+/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout-normal/childdetail.xml
+/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout-normal-land/childdetail.xml
+/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout-normal/session.xml
+/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout-large-land/session.xml
+/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout-normal-land/session.xml
