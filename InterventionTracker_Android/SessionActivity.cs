@@ -1,35 +1,29 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Timers;
 
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Intervention Tracker - Session", Icon = "@drawable/icon")]			
+	[Activity (Label = "Intervention Tracker - Session", Icon = "@drawable/icon", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class SessionActivity : Activity
 	{
-		private string _sessionMethod;
-		private int _sessionDuration;
-		private int _childID;
-		private int _numberOfInterventions = 0;
-		TextView _timer = null;
-		Button _interventionButton = null;
-		Button _completeButton = null;
-		private Timer _sessionTimer;
-		private int _timeRemaining = 0;
+		string _sessionMethod;
+		int _sessionDuration;
+		int _childID;
+		int _numberOfInterventions;
+		TextView _timer;
+		Button _interventionButton;
+		Button _completeButton;
+		Timer _sessionTimer;
+		int _timeRemaining;
 		
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
 			SetContentView (Resource.Layout.Session);
 
@@ -84,8 +78,8 @@ namespace InterventionTracker_Android
 
 		void CompleteButton_Click (object sender, EventArgs e)
 		{
-			SessionRepository sessionRepository = new SessionRepository ();
-			Session session = new Session ();
+			var sessionRepository = new SessionRepository ();
+			var session = new Session ();
 
 			session.ChildID = _childID;
 			session.NumberOfRedirects = _numberOfInterventions;
@@ -97,16 +91,16 @@ namespace InterventionTracker_Android
 			Finish ();
 		}
 
-		private string TimeRemainingFormated()
+		string TimeRemainingFormated()
 		{
-			int minutes = 0;
-			int seconds = 0;
+			int minutes;
+			int seconds;
 			string formattedSeconds;
 
 			minutes = _timeRemaining / 60;
 			seconds = _timeRemaining % 60;
 
-			formattedSeconds = (seconds < 10) ? ("0" + seconds.ToString ()) : seconds.ToString ();
+			formattedSeconds = (seconds < 10) ? ("0" + seconds) : seconds.ToString ();
 
 			return string.Format ("{0}:{1}", minutes, formattedSeconds);
 		}

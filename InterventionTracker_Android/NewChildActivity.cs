@@ -1,25 +1,19 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.Views.InputMethods;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Intervention Tracker - New Child", Icon = "@drawable/icon")]			
+	[Activity (Label = "Intervention Tracker - New Child", Icon = "@drawable/icon", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 	public class NewChildActivity : Activity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{
-			base.OnCreate (bundle);
+			base.OnCreate (savedInstanceState);
 
 			// Create your application here
 			SetContentView(Resource.Layout.NewChild);
@@ -28,9 +22,9 @@ namespace InterventionTracker_Android
 			addChildButton.Click += AddChildClicked;
 		}
 
-		private void AddChildClicked(object sender, EventArgs e)
+		void AddChildClicked(object sender, EventArgs e)
 		{
-			ChildRepository childRepository = new ChildRepository ();
+			var childRepository = new ChildRepository ();
 
 			var name = FindViewById<EditText> (Resource.Id.nameText);
 			var dob = FindViewById<EditText> (Resource.Id.dobText);
@@ -41,7 +35,7 @@ namespace InterventionTracker_Android
 			var inputMethodManager = (InputMethodManager)GetSystemService(Context.InputMethodService);
 			inputMethodManager.HideSoftInputFromWindow(unit.WindowToken, 0);
 
-			Child child = new Child ();
+			var child = new Child ();
 
 			child.FullName = name.Text;
 			child.DateOfBirth = dob.Text;
