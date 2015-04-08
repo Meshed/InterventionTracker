@@ -8,7 +8,7 @@ using Android.Widget;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Intervention Tracker - Session", Icon = "@drawable/icon", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
+	[Activity (Label = "Session", Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 	public class SessionActivity : Activity
 	{
 		string _sessionMethod;

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="com.meshedsolutions.interventiontracker" android:versionName="0.1">
+  <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
+  <application android:label="InterventionTracker_Android" android:icon="@drawable/icon" android:name="mono.android.app.Application">
+    <activity android:icon="@drawable/icon" android:label="Intervention Tracker" android:screenOrientation="portrait" android:name="interventiontracker_android.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:icon="@drawable/icon" android:label="New Child" android:screenOrientation="portrait" android:name="interventiontracker_android.NewChildActivity" />
+    <activity android:icon="@drawable/icon" android:label="Child Details" android:screenOrientation="portrait" android:name="interventiontracker_android.ChildDetailActivity" />
+    <activity android:icon="@drawable/icon" android:label="New Session" android:screenOrientation="portrait" android:name="interventiontracker_android.NewSessionActivity" />
+    <activity android:icon="@drawable/icon" android:label="Session" android:screenOrientation="portrait" android:name="interventiontracker_android.SessionActivity" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.meshedsolutions.interventiontracker.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>

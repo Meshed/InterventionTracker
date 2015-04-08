@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Intervention Tracker - New Session", Icon = "@drawable/icon")]			
+	[Activity (Label = "New Session", Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class NewSessionActivity : Activity
 	{
 		EditText sessionDurationText;

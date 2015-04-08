@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Intervention Tracker - Child Details", Icon="@drawable/icon")]			
+	[Activity (Label = "Child Details", Icon="@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
 	public class ChildDetailActivity : Activity
 	{
 		private int _childID = 0;
@@ -68,7 +68,9 @@ namespace InterventionTracker_Android
 		{
 			SessionRepository sessionRepository = new SessionRepository ();
 			_sessions = await sessionRepository.GetAllForChild (_childID);
-			_sessionListView.Adapter = new SessionHistoryAdapter (this, _sessions);
+			if (_sessions != null) {
+				_sessionListView.Adapter = new SessionHistoryAdapter (this, _sessions);
+			}
 		}
 
 		protected override void OnResume ()

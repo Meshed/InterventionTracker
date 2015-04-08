@@ -2,16 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="InterventionTracker_Android.InterventionTracker_Android">
   <uses-sdk android:minSdkVersion="15" />
   <application android:label="InterventionTracker_Android" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:icon="@drawable/icon" android:label="Intervention Tracker" android:name="interventiontracker_android.MainActivity">
+    <activity android:icon="@drawable/icon" android:label="Intervention Tracker" android:screenOrientation="portrait" android:name="interventiontracker_android.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="Intervention Tracker - New Child" android:name="interventiontracker_android.NewChildActivity" />
-    <activity android:icon="@drawable/icon" android:label="Intervention Tracker - Child Details" android:name="interventiontracker_android.ChildDetailActivity" />
-    <activity android:icon="@drawable/icon" android:label="Intervention Tracker - New Session" android:name="interventiontracker_android.NewSessionActivity" />
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="Intervention Tracker - Session" android:name="interventiontracker_android.SessionActivity" />
+    <activity android:icon="@drawable/icon" android:label="New Child" android:screenOrientation="portrait" android:name="interventiontracker_android.NewChildActivity" />
+    <activity android:icon="@drawable/icon" android:label="Child Details" android:screenOrientation="portrait" android:name="interventiontracker_android.ChildDetailActivity" />
+    <activity android:icon="@drawable/icon" android:label="New Session" android:screenOrientation="portrait" android:name="interventiontracker_android.NewSessionActivity" />
+    <activity android:icon="@drawable/icon" android:label="Session" android:screenOrientation="portrait" android:name="interventiontracker_android.SessionActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="InterventionTracker_Android.InterventionTracker_Android.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>

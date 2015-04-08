@@ -37,6 +37,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <ConsolePause>false</ConsolePause>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+    <AndroidLinkMode>Full</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -94,6 +95,13 @@
     <AndroidResource Include="Resources\layout-normal\Session.axml" />
     <AndroidResource Include="Resources\layout-large-land\Session.axml" />
     <AndroidResource Include="Resources\layout-normal-land\Session.axml" />
+    <AndroidResource Include="Resources\layout-normal\NewSession.axml" />
+    <AndroidResource Include="Resources\layout-normal-land\NewSession.axml" />
+    <AndroidResource Include="Resources\layout-large\NewSession.axml" />
+    <AndroidResource Include="Resources\layout-large-land\NewSession.axml" />
+    <AndroidResource Include="Resources\layout-small-land\NewSession.axml" />
+    <AndroidResource Include="Resources\layout-land\NewSession.axml" />
+    <AndroidResource Include="Resources\layout-land\ChildDetail.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
 </Project>

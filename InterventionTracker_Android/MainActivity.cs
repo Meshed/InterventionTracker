@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Intervention Tracker", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Intervention Tracker", MainLauncher = true, Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 	public class MainActivity : Activity
 	{
 		ListView childListView;

@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="InterventionTracker_Android/InterventionTracker_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.0a543e3f" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.Nexus 7 (Jelly Bean)" />
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <AuthorInfo Name="" Email="" Copyright="Meshed Solutions, LLC" Company="Meshed Solutions, LLC" Trademark="" />
-  <MonoDevelop.Ide.ItemProperties.InterventionTracker__Android AndroidDesignerPreferredDevice="Nexus 7" />
+  <AuthorInfo Name="Mark Brown" Email="support@meshedsolutions.com" Copyright="Meshed Solutions, LLC" Company="Meshed Solutions, LLC" Trademark="" />
+  <MonoDevelop.Ide.ItemProperties.InterventionTracker__Android AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>
