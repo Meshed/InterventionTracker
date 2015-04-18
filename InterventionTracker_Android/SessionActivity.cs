@@ -88,6 +88,7 @@ namespace InterventionTracker_Android
 			session.SessionMethod = _sessionMethod;
 
 			sessionRepository.AddSessionAsync (session);
+			Toast.MakeText (this, "Session Info Saved", ToastLength.Long).Show ();
 			Finish ();
 		}
 

@@ -29,7 +29,6 @@ namespace InterventionTracker_Android
 			var name = FindViewById<EditText> (Resource.Id.nameText);
 			var dob = FindViewById<EditText> (Resource.Id.dobText);
 			var unit = FindViewById<EditText> (Resource.Id.unitText);
-			var status = FindViewById<TextView> (Resource.Id.childAddStatus);
 
 			// Hide software keyboard when the button is pressed
 			var inputMethodManager = (InputMethodManager)GetSystemService(Context.InputMethodService);
@@ -44,10 +43,11 @@ namespace InterventionTracker_Android
 			try
 			{
 				childRepository.AddChildAsync (child);
-				status.Text = "Child Added Successfully";
+				Toast.MakeText(this, "Child Added Successfully", ToastLength.Long).Show();
+				Finish ();
 			}
 			catch(Exception exception) {
-				status.Text = "There was a problem adding the child";
+				Toast.MakeText(this, "Error adding child: " + exception.Message, ToastLength.Long).Show();
 			}
 		}
 	}

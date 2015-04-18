@@ -71,14 +71,11 @@ namespace InterventionTracker_Android
 			// aapt resource value: 0x7f050014
 			public const int addChild = 2131034132;
 			
-			// aapt resource value: 0x7f050015
-			public const int childAddStatus = 2131034133;
-			
 			// aapt resource value: 0x7f050006
 			public const int childDOBText = 2131034118;
 			
-			// aapt resource value: 0x7f050016
-			public const int childName = 2131034134;
+			// aapt resource value: 0x7f050015
+			public const int childName = 2131034133;
 			
 			// aapt resource value: 0x7f050005
 			public const int childNameText = 2131034117;
@@ -95,11 +92,11 @@ namespace InterventionTracker_Android
 			// aapt resource value: 0x7f05000b
 			public const int imageView1 = 2131034123;
 			
-			// aapt resource value: 0x7f05001d
-			public const int interveneButton = 2131034141;
+			// aapt resource value: 0x7f05001c
+			public const int interveneButton = 2131034140;
 			
-			// aapt resource value: 0x7f050019
-			public const int interventionMethodLabel = 2131034137;
+			// aapt resource value: 0x7f050018
+			public const int interventionMethodLabel = 2131034136;
 			
 			// aapt resource value: 0x7f05000c
 			public const int name = 2131034124;
@@ -113,38 +110,38 @@ namespace InterventionTracker_Android
 			// aapt resource value: 0x7f050009
 			public const int newSession = 2131034121;
 			
-			// aapt resource value: 0x7f050020
-			public const int numberOfRedirects = 2131034144;
+			// aapt resource value: 0x7f05001f
+			public const int numberOfRedirects = 2131034143;
 			
 			// aapt resource value: 0x7f050000
 			public const int relativeLayout1 = 2131034112;
 			
+			// aapt resource value: 0x7f05001d
+			public const int sessionCompleteButton = 2131034141;
+			
 			// aapt resource value: 0x7f05001e
-			public const int sessionCompleteButton = 2131034142;
+			public const int sessionDate = 2131034142;
 			
-			// aapt resource value: 0x7f05001f
-			public const int sessionDate = 2131034143;
-			
-			// aapt resource value: 0x7f050018
-			public const int sessionDuration = 2131034136;
+			// aapt resource value: 0x7f050017
+			public const int sessionDuration = 2131034135;
 			
 			// aapt resource value: 0x7f05000a
 			public const int sessionHistory = 2131034122;
 			
-			// aapt resource value: 0x7f050021
-			public const int sessionMethod = 2131034145;
+			// aapt resource value: 0x7f050020
+			public const int sessionMethod = 2131034144;
+			
+			// aapt resource value: 0x7f050019
+			public const int sessionMethodEdit = 2131034137;
 			
 			// aapt resource value: 0x7f05001a
-			public const int sessionMethodEdit = 2131034138;
+			public const int sessionStart = 2131034138;
+			
+			// aapt resource value: 0x7f050016
+			public const int sessionTimeLabel = 2131034134;
 			
 			// aapt resource value: 0x7f05001b
-			public const int sessionStart = 2131034139;
-			
-			// aapt resource value: 0x7f050017
-			public const int sessionTimeLabel = 2131034135;
-			
-			// aapt resource value: 0x7f05001c
-			public const int sessionTimer = 2131034140;
+			public const int sessionTimer = 2131034139;
 			
 			// aapt resource value: 0x7f05000f
 			public const int textView1 = 2131034127;

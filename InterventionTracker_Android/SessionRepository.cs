@@ -4,6 +4,7 @@ using SQLite.Net;
 using SQLite.Net.Platform.XamarinAndroid;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Android.Util;
 
 namespace InterventionTracker_Android
 {
@@ -38,10 +39,15 @@ namespace InterventionTracker_Android
 
 		public async Task<List<Session>> GetAllForChild(int childID)
 		{
-			List<Session> sessionList;
+			List<Session> sessionList = null;
 
-			sessionList = await dbConn.Table<Session> ().Where (i => i.ChildID == childID).ToListAsync ();
-
+			try 
+			{
+				sessionList = await dbConn.Table<Session> ().Where (i => i.ChildID == childID).ToListAsync ();
+			}
+			catch (Exception ex) {
+				Log.Debug ("SessionRepository", "EXCEPTION!!!! - " + ex.Message);
+			}
 			return sessionList;
 		}
 	}

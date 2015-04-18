@@ -10,6 +10,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.Threading.Tasks;
+using Android.Util;
 
 namespace InterventionTracker_Android
 {
@@ -31,18 +33,20 @@ namespace InterventionTracker_Android
 			_childID = int.Parse (Intent.GetLongExtra ("childID", 0).ToString ());
 			Child child = null;
 
-			if (_childID > 0) 
-			{
-				child = await childRepository.GetByIDAsync (_childID);
-				PopulateSessions ();
-			}
 
-			// Get activity views
 			var childName = FindViewById<TextView> (Resource.Id.childNameText);
 			var childDOB = FindViewById<TextView> (Resource.Id.childDOBText);
 			var childUnit = FindViewById<TextView> (Resource.Id.childUnitText);
 			_sessionListView = FindViewById<ListView> (Resource.Id.sessionHistory);
 			var newSessionButton = FindViewById<Button> (Resource.Id.newSession);
+
+			if (_childID > 0) 
+			{
+				child = await childRepository.GetByIDAsync (_childID);
+			}
+
+			// Get activity views
+
 
 			newSessionButton.Click += NewSessionClicked;
 
@@ -64,20 +68,20 @@ namespace InterventionTracker_Android
 			StartActivity (intent);
 		}
 
-		private async void PopulateSessions()
+		private async Task PopulateSessions()
 		{
 			SessionRepository sessionRepository = new SessionRepository ();
 			_sessions = await sessionRepository.GetAllForChild (_childID);
+
 			if (_sessions != null) {
 				_sessionListView.Adapter = new SessionHistoryAdapter (this, _sessions);
 			}
 		}
 
-		protected override void OnResume ()
+		protected async override void OnResume ()
 		{
 			base.OnResume ();
-
-			PopulateSessions ();
+			await PopulateSessions ();
 		}
 	}
 }

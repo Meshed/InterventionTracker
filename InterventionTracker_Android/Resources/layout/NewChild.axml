@@ -48,12 +48,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/addChild" />
-    <TextView xmlns:tools="http://schemas.android.com/tools"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/childAddStatus"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        android:textColor="#ff19dd5d" />
 </LinearLayout>
