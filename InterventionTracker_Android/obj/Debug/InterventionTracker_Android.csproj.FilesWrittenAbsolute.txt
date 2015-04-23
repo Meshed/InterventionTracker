@@ -37,3 +37,4 @@
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/bin/Debug/SQLite.Net.dll
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/bin/Debug/SQLite.Net.Platform.XamarinAndroid.dll
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/bin/Debug/SQLite.Net.Async.dll
+/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Debug/res/layout-large-port/childdetail.xml

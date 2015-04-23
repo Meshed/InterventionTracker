@@ -5,15 +5,18 @@ using Android.Content;
 using Android.OS;
 using Android.Widget;
 using Android.Views.InputMethods;
+using Android.Util;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "New Child", Icon = "@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
+	[Activity (Label = "New Child", Icon = "@drawable/icon")]
 	public class NewChildActivity : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
+
+			Log.Debug ("OnCreate", "OnCreate");
 
 			// Create your application here
 			SetContentView(Resource.Layout.NewChild);
@@ -49,6 +52,30 @@ namespace InterventionTracker_Android
 			catch(Exception exception) {
 				Toast.MakeText(this, "Error adding child: " + exception.Message, ToastLength.Long).Show();
 			}
+		}
+
+		protected override void OnStop ()
+		{
+			Log.Debug ("OnStop", "OnStop");
+			base.OnStop ();
+		}
+
+		protected override void OnStart ()
+		{
+			Log.Debug ("OnStart", "OnStart");
+			base.OnStart ();
+		}
+
+		protected override void OnPause ()
+		{
+			Log.Debug ("OnPause", "OnPause");
+			base.OnPause ();
+		}
+
+		protected override void OnResume ()
+		{
+			Log.Debug ("OnResume", "OnResume");
+			base.OnResume ();
 		}
 	}
 }

@@ -15,7 +15,7 @@ using Android.Util;
 
 namespace InterventionTracker_Android
 {
-	[Activity (Label = "Child Details", Icon="@drawable/icon", ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]			
+	[Activity (Label = "Child Details", Icon="@drawable/icon")]			
 	public class ChildDetailActivity : Activity
 	{
 		private int _childID = 0;

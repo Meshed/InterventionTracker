@@ -21,7 +21,7 @@ namespace InterventionTracker_Android
 		Button startButton;
 		int _childID = 0;
 		
-		protected override void OnCreate (Bundle bundle)
+		protected async override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
@@ -34,8 +34,13 @@ namespace InterventionTracker_Android
 			sessionDurationText = FindViewById<EditText>(Resource.Id.sessionDuration);
 			sessionMethodText = FindViewById<EditText> (Resource.Id.sessionMethodEdit);
 			startButton = FindViewById<Button> (Resource.Id.sessionStart);
+			var childName = FindViewById<TextView> (Resource.Id.childName);
+
+			ChildRepository childRepository = new ChildRepository ();
+			var child = await childRepository.GetByIDAsync (_childID);
 
 			startButton.Click += StartButtonClicked;
+			childName.Text = child.FullName;
 		}
 
 		private void StartButtonClicked(object sender, EventArgs e)

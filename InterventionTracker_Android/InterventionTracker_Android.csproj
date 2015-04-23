@@ -39,6 +39,11 @@
     <ConsolePause>false</ConsolePause>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
     <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>/Users/markbrown/meshedsolutions.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>Shoestrings2</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>MeshedSolutions</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>Shoestrings2</AndroidSigningKeyPass>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,16 +64,16 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Child.cs" />
-    <Compile Include="ChildAdapter.cs" />
-    <Compile Include="NewChildActivity.cs" />
-    <Compile Include="ChildDetailActivity.cs" />
-    <Compile Include="Session.cs" />
-    <Compile Include="SessionHistoryAdapter.cs" />
-    <Compile Include="ChildRepository.cs" />
-    <Compile Include="SessionRepository.cs" />
-    <Compile Include="NewSessionActivity.cs" />
-    <Compile Include="SessionActivity.cs" />
+    <Compile Include="Child\Child.cs" />
+    <Compile Include="Child\ChildAdapter.cs" />
+    <Compile Include="Child\ChildDetailActivity.cs" />
+    <Compile Include="Child\ChildRepository.cs" />
+    <Compile Include="Session\Session.cs" />
+    <Compile Include="Session\SessionActivity.cs" />
+    <Compile Include="Session\SessionHistoryAdapter.cs" />
+    <Compile Include="Session\SessionRepository.cs" />
+    <Compile Include="Child\NewChildActivity.cs" />
+    <Compile Include="Session\NewSessionActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -103,6 +108,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout-large-port\ChildDetail.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -111,5 +117,7 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Child\" />
+    <Folder Include="Session\" />
   </ItemGroup>
 </Project>
