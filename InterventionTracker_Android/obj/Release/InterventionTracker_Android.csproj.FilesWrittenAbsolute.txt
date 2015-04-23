@@ -29,6 +29,7 @@
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Release/res/drawable-xhdpi/icon.png
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Release/res/drawable-xxhdpi/icon.png
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Release/res/drawable-xxxhdpi/icon.png
+/Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Release/res/layout-large-port/childdetail.xml
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Release/R.cs.flag
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/bin/Release/com.meshedsolutions.interventiontracker-Signed.apk
 /Users/markbrown/workspace/InterventionTracker/InterventionTracker_Android/obj/Release/uploadflags.txt

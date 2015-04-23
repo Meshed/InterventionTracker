@@ -49,7 +49,7 @@
         p1:id="@+id/numberOfRedirects"
         p1:layout_below="@id/sessionDate" />
     <TextView
-        p1:text="Session Method: "
+        p1:text="Event Occurred: "
         p1:textAppearance="?android:attr/textAppearanceMedium"
         p1:layout_width="wrap_content"
         p1:layout_height="wrap_content"
