@@ -31,7 +31,7 @@
         p1:layout_below="@id/childName"
         p1:layout_marginTop="15dp" />
     <TextView
-        p1:text="Intervention Method: "
+        p1:text="Event Occurred: "
         p1:textAppearance="?android:attr/textAppearanceMedium"
         p1:layout_width="wrap_content"
         p1:layout_height="wrap_content"
